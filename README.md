@@ -1,70 +1,62 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React-redux-use
 
-## Available Scripts
+This is a simple React app that demonstrates the use of Redux action creators to manage the state of a bank account. You can deposit or withdraw money from the account and see the balance update in real time.
 
-In the project directory, you can run:
+## Installation
 
-### `npm start`
+To run this app, you need to have Node.js and npm installed on your machine. Then, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://<your_app_url>.pwskills.app:3000](http://<your_app_url>.pwskills.app:3000) to view it in your browser.
+1. Clone this repository to your local machine: `git clone https://github.com/Kanishkweb/React-redux-use.git`
+2. Navigate to the project folder: `cd React-redux-use`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your browser and go to http://localhost:3000 to see the app in action.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Usage
 
-### `npm test`
+The app has a simple interface that allows you to enter an amount of money and choose to deposit or withdraw it from the account. The balance will be displayed below the input field and will change accordingly. You can also see the history of transactions in a table below the balance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Redux Action Creators
 
-### `npm run build`
+The app uses Redux to manage the state of the account and the transactions. The following action creators are defined in src/actions/bankingActions.js:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `depositMoney(amount)`: Dispatches this action to deposit the specified `amount` into the account balance.
+- `withdrawMoney(amount)`: Dispatches this action to withdraw the specified `amount` from the account balance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Folder Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The project structure is organized as follows:
 
-### `npm run eject`
+```
+├── public
+│   └── index.html
+├── src
+│   ├── actions
+│   │   └── bankingActions.js
+│   ├── components
+│   │   ├── AccountBalance.js
+│   │   ├── DepositForm.js
+│   │   ├── TransactionHistory.js
+│   │   └── WithdrawForm.js
+│   ├── reducers
+│   │   └── bankingReducer.js
+│   ├── App.js
+│   └── index.js
+├── .gitignore
+├── LICENSE
+├── package.json
+└── README.md
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- The `public` directory contains the HTML file for the app.
+- The `src` directory contains the main source code.
+- The `actions` directory holds the Redux action creators.
+- The `components` directory contains the React components responsible for rendering the forms, the balance and the history.
+- The `reducers` directory holds the Redux reducer responsible for updating the state based on dispatched actions.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feel free to explore the code and make any modifications or enhancements according to your needs.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## License
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License - see the LICENSE file for details.
